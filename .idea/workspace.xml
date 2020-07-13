@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eca62f1c-b6a8-429a-af8b-4891d92a1018" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/red/felnull/ikisugibot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/red/felnull/ikisugibot/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/red/felnull/ikisugibot/OptionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/red/felnull/ikisugibot/OptionConfig.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,23 +29,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="IkisugiBot" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="IkisugiBot" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="IkisugiBot" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="shadow" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -68,6 +57,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RunManager" selected="アプリケーション.Main">
     <configuration name="Main" type="Application" factoryName="アプリケーション" temporary="true" nameIsGenerated="true">
@@ -131,7 +124,15 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="645" y="214" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1594482369640" />
+<<<<<<< Updated upstream
     <state width="1637" height="268" key="GridCell.Tab.0.bottom" timestamp="1594629694373">
+=======
+    <state x="657" y="262" key="FileChooserDialogImpl" timestamp="1594628070845">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="657" y="262" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1594628070845" />
+    <state width="1637" height="268" key="GridCell.Tab.0.bottom" timestamp="1594567106534">
+>>>>>>> Stashed changes
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1637" height="268" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1594629694373" />
@@ -163,6 +164,14 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1637" height="335" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1594490400425" />
+    <state x="337" y="85" key="SettingsEditor" timestamp="1594628075083">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="337" y="85" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1594628075083" />
+    <state x="557" y="385" key="com.intellij.ide.util.TipDialog" timestamp="1594628016072">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="557" y="385" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1594628016072" />
     <state x="503" y="217" width="672" height="678" key="search.everywhere.popup" timestamp="1594486931218">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

@@ -6,6 +6,7 @@ import discord4j.core.object.entity.channel.MessageChannel;
 import red.felnull.ikisugibot.OptionConfig;
 import red.felnull.ikisugibot.command.IKSGCommands;
 import red.felnull.ikisugibot.messages.Ai;
+import red.felnull.ikisugibot.util.DiscordUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,27 +43,25 @@ public class MessageHandler {
         List<String> ml = new ArrayList<String>();
         ml.addAll(Arrays.asList(messages));
         ml.remove(0);
-        onComandMessage(e, ml.toArray(new String[1]));
+        onComandMessage(channel.getId().asLong(), ml.toArray(new String[1]));
 
     }
 
-    public static void onComandMessage(MessageCreateEvent e, String[] mozis) {
-        Message message = e.getMessage();
-        MessageChannel channel = message.getChannel().block();
+    public static void onComandMessage(long chanelID, String[] mozis) {
         if (IKSGCommands.COMMANDS.containsKey(mozis[0])) {
             List<String> ml = new ArrayList<String>();
             ml.addAll(Arrays.asList(mozis));
             ml.remove(0);
             try {
-                IKSGCommands.COMMANDS.get(mozis[0]).start(e, ml.toArray(new String[1]));
+                IKSGCommands.COMMANDS.get(mozis[0]).start(chanelID, ml.toArray(new String[1]));
             } catch (Exception ex) {
                 String st = "エラーが発生しました:";
                 st += ex.getLocalizedMessage();
-                channel.createMessage(st).block();
+                DiscordUtil.sendMessage(chanelID, st);
             }
         } else {
             Random r = new Random();
-            channel.createMessage((r.nextBoolean() ? "" : "申し訳ないが") + mozis[0] + "は存在しないコマンドです").block();
+            DiscordUtil.sendMessage(chanelID, (r.nextBoolean() ? "" : "申し訳ないが") + mozis[0] + "は存在しないコマンドです");
         }
     }
 }

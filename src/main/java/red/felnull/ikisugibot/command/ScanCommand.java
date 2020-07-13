@@ -1,11 +1,9 @@
 package red.felnull.ikisugibot.command;
 
-import discord4j.core.event.domain.message.MessageCreateEvent;
-import discord4j.core.object.entity.Message;
-import discord4j.core.object.entity.channel.MessageChannel;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 import red.felnull.ikisugibot.OptionConfig;
+import red.felnull.ikisugibot.util.DiscordUtil;
 import red.felnull.ikisugibot.util.ImageHelper;
 import red.felnull.ikisugibot.util.StringHelper;
 
@@ -16,17 +14,15 @@ import java.net.URL;
 
 public class ScanCommand extends Command {
     @Override
-    public void start(MessageCreateEvent e, String[] attackd) {
-        Message message = e.getMessage();
-        MessageChannel channel = message.getChannel().block();
+    public void start(long chanelID, String[] attackd) {
         String lang = "jpn";
         boolean sirokuro = true;
         if (attackd[0] == null) {
-            channel.createMessage("使用例 -> " + OptionConfig.COMMAND + " " + "scan [URL] [jpn/eng] [白黒化するか]").block();
+            DiscordUtil.sendMessage(chanelID, "使用例 -> " + OptionConfig.COMMAND + " " + "scan [URL] [jpn/eng] [白黒化するか]");
             return;
         } else if (attackd.length > 1) {
             if (!attackd[1].equals("jpn") && !attackd[1].equals("eng")) {
-                channel.createMessage("使用例 -> " + OptionConfig.COMMAND + " " + "scan [URL] [jpn/eng] [白黒化するか]").block();
+                DiscordUtil.sendMessage(chanelID, "使用例 -> " + OptionConfig.COMMAND + " " + "scan [URL] [jpn/eng] [白黒化するか]");
                 return;
             }
             lang = attackd[1];
@@ -40,16 +36,16 @@ public class ScanCommand extends Command {
             connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0");
             BufferedImage img = sirokuro ? ImageHelper.covWhiteAndBlack(ImageIO.read(connection.getInputStream())) : ImageIO.read(connection.getInputStream());
             ITesseract tesseract = new Tesseract();
-            tesseract.setDatapath("D:\\Desktop\\IkisugiBot");
+            tesseract.setDatapath(OptionConfig.DATA_PATH.toString());
             tesseract.setLanguage(lang);
             String str = tesseract.doOCR(img);
             String text = "読み込み結果です\n";
             text += str;
-            channel.createMessage(text).block();
+            DiscordUtil.sendMessage(chanelID, text);
         } catch (Exception ex) {
             String st = "エラーが発生しました:";
             st += ex.getLocalizedMessage();
-            channel.createMessage(st).block();
+            DiscordUtil.sendMessage(chanelID, st);
         }
 
     }

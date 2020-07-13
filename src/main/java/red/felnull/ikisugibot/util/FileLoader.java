@@ -1,6 +1,7 @@
 package red.felnull.ikisugibot.util;
 
 import java.io.*;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
 
@@ -24,7 +25,21 @@ public class FileLoader {
 
         }
     }
+    public static byte[] fileBytesReader(Path path) {
+        try {
+            return Files.readAllBytes(path);
+        } catch (IOException e) {
+            return null;
+        }
+    }
 
+    public static void fileBytesWriter(byte[] bytedatas, Path path) {
+        createFolder(path.getParent());
+        try {
+            Files.write(path, bytedatas);
+        } catch (IOException e) {
+        }
+    }
     public static void txtReader(Map<String, String> map, Path path) {
         map.clear();
         try {

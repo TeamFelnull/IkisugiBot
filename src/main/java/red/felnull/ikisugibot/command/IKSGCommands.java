@@ -1,5 +1,7 @@
 package red.felnull.ikisugibot.command;
 
+import red.felnull.ikisugibot.util.DiscordUtil;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +15,19 @@ public class IKSGCommands {
         reg("spam", new SpamCommand());
         reg("goroku", new GorokuCommand());
         reg("scan", new ScanCommand());
-        reg("twitter", new TwitterCommand());
+        //reg("twitter", new TwitterCommand());
+    }
+
+    public static void send(long chanelID, String comand, String... insus) {
+        try {
+
+
+            COMMANDS.get(comand).start(chanelID, insus);
+        } catch (Exception ex) {
+            String st = "エラーが発生しました:";
+            st += ex.getLocalizedMessage();
+            DiscordUtil.sendMessage(chanelID, st);
+        }
     }
 
     public static void reg(String st, Command cm) {

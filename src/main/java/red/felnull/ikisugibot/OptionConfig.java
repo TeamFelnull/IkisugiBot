@@ -12,12 +12,14 @@ public class OptionConfig {
 
     public static String COMMAND;
     public static String TOKEN;
-    public static long AREA_19_CHANNELID;
+    public static long TIME_SIGNAL_CHANNELID;
     public static long AI_CHANNELID;
+    public static Path DATA_PATH;
 
     public static void init() {
         OPTION_CONFIG_PATH = Paths.get("config.txt");
         HashMap<String, String> defmap = new HashMap<String, String>();
+        defmap.put("DataPath", "data");
         defmap.put("Command", "!1919");
         defmap.put("Token", "000");
         defmap.put("TimeSignalChannelID", "000");
@@ -32,9 +34,10 @@ public class OptionConfig {
         }
         FileLoader.txtWriter(opmap, OPTION_CONFIG_PATH, false);
 
+        DATA_PATH = Paths.get(opmap.get("DataPath"));
         COMMAND = opmap.get("Command");
         TOKEN = opmap.get("Token");
-        AREA_19_CHANNELID = Long.parseLong(opmap.get("TimeSignalChannelID"));
+        TIME_SIGNAL_CHANNELID = Long.parseLong(opmap.get("TimeSignalChannelID"));
         AI_CHANNELID = Long.parseLong(opmap.get("AiChannelID"));
 
     }

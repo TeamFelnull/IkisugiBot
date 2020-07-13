@@ -1,9 +1,9 @@
 package red.felnull.ikisugibot.command;
 
-import discord4j.core.event.domain.message.MessageCreateEvent;
+import java.io.IOException;
 
 public class Command {
-    public void start(MessageCreateEvent e, String[] attackd) {
+    public void start(long chanelID, String[] attackd) throws IOException {
     }
 
     public String getExplanatory() {

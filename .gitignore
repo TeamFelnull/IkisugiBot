@@ -21,6 +21,7 @@ build
 eclipse
 run
 config.txt
+.data
 twitter4j.properties
 # Files from Forge MDK
 forge*changelog.txt

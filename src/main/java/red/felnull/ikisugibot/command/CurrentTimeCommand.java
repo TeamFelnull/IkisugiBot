@@ -1,22 +1,17 @@
 package red.felnull.ikisugibot.command;
 
-import discord4j.core.event.domain.message.MessageCreateEvent;
-import discord4j.core.object.entity.Message;
-import discord4j.core.object.entity.channel.MessageChannel;
+import red.felnull.ikisugibot.util.DiscordUtil;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class CurrentTimeCommand extends Command {
     @Override
-    public void start(MessageCreateEvent e, String[] attackd) {
-        Message message = e.getMessage();
-        MessageChannel channel = message.getChannel().block();
+    public void start(long chanelID, String[] attackd) {
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy年M月d日E曜日h時m分s秒");
         String lists = "現在は" + sdf.format(calendar.getTime()) + "です\n";
-        channel.createMessage(lists).block();
+        DiscordUtil.sendMessage(chanelID, lists);
     }
 
     @Override

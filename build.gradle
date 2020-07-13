@@ -3,7 +3,7 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 group 'red.felnull'
-version '1.0'
+version '1.1'
 apply plugin:'application'
 mainClassName = 'red.felnull.ikisugibot.Main'
 

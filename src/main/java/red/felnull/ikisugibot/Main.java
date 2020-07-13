@@ -5,19 +5,25 @@ import discord4j.core.GatewayDiscordClient;
 import discord4j.core.event.domain.message.MessageCreateEvent;
 import red.felnull.ikisugibot.command.IKSGCommands;
 import red.felnull.ikisugibot.handler.MessageHandler;
+import red.felnull.ikisugibot.messages.Ai;
+import red.felnull.ikisugibot.messages.TwitterM;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class Main {
     public static JFrame frame;
+    public static DiscordClient CLIENT;
+    public static GatewayDiscordClient GATEWAY;
+
 
     public static void main(String[] args) {
         init();
-        System.out.println(OptionConfig.TOKEN);
-        DiscordClient client = DiscordClient.create(OptionConfig.TOKEN);
-        GatewayDiscordClient gateway = client.login().block();
-        gateway.on(MessageCreateEvent.class).subscribe(e -> {
+        LoopThread lt = new LoopThread();
+        lt.start();
+        CLIENT = DiscordClient.create(OptionConfig.TOKEN);
+        GATEWAY = CLIENT.login().block();
+        GATEWAY.on(MessageCreateEvent.class).subscribe(e -> {
 
             if (e.getMessage().getAuthor().get().isBot())
                 return;
@@ -25,13 +31,16 @@ public class Main {
 
             MessageHandler.onMessageCreate(e);
         });
-        gateway.onDisconnect().block();
+
+        GATEWAY.onDisconnect().block();
 
     }
 
     public static void init() {
         OptionConfig.init();
         IKSGCommands.init();
+        Ai.init();
+        TwitterM.init();
         frame = new JFrame("Ikisugi Bot");
         frame.setSize(305, 46);
         Toolkit kit = Toolkit.getDefaultToolkit();

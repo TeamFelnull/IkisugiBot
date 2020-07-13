@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eca62f1c-b6a8-429a-af8b-4891d92a1018" name="Default Changelist" comment="" />
+    <list default="true" id="eca62f1c-b6a8-429a-af8b-4891d92a1018" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/red/felnull/ikisugibot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/red/felnull/ikisugibot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/red/felnull/ikisugibot/OptionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/red/felnull/ikisugibot/OptionConfig.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +58,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1eXiCkSn0RfcURYxQkeTBqdKsk3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -62,7 +69,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Gradle.IkisugiDiscordBot [shadowJar]">
+  <component name="RunManager" selected="アプリケーション.Main">
     <configuration name="Main" type="Application" factoryName="アプリケーション" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="red.felnull.ikisugibot.Main" />
       <module name="IkisugiBot.main" />
@@ -124,22 +131,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="645" y="214" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1594482369640" />
-    <state width="1637" height="268" key="GridCell.Tab.0.bottom" timestamp="1594567106534">
+    <state width="1637" height="268" key="GridCell.Tab.0.bottom" timestamp="1594629694373">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="268" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1594567106534" />
-    <state width="1637" height="268" key="GridCell.Tab.0.center" timestamp="1594567106533">
+    <state width="1637" height="268" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1594629694373" />
+    <state width="1637" height="268" key="GridCell.Tab.0.center" timestamp="1594629694373">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="268" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1594567106533" />
-    <state width="1637" height="268" key="GridCell.Tab.0.left" timestamp="1594567106533">
+    <state width="1637" height="268" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1594629694373" />
+    <state width="1637" height="268" key="GridCell.Tab.0.left" timestamp="1594629694373">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="268" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1594567106533" />
-    <state width="1637" height="268" key="GridCell.Tab.0.right" timestamp="1594567106533">
+    <state width="1637" height="268" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1594629694373" />
+    <state width="1637" height="268" key="GridCell.Tab.0.right" timestamp="1594629694373">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="268" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1594567106533" />
+    <state width="1637" height="268" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1594629694373" />
     <state width="1637" height="335" key="GridCell.Tab.1.bottom" timestamp="1594490400425">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

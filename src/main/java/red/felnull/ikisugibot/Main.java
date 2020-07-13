@@ -14,8 +14,8 @@ public class Main {
 
     public static void main(String[] args) {
         init();
-        String token = "NzMwNjcyNTk0MzUyODY1Mjgy.XwcRSg.BAmXpms26Dw-eJoQjhX6MYxYI1E";
-        DiscordClient client = DiscordClient.create(token);
+        System.out.println(OptionConfig.TOKEN);
+        DiscordClient client = DiscordClient.create(OptionConfig.TOKEN);
         GatewayDiscordClient gateway = client.login().block();
         gateway.on(MessageCreateEvent.class).subscribe(e -> {
 

@@ -20,6 +20,9 @@ public class TimeHandler {
         if (hour == 19 && minute == 19) {
             DiscordUtil.sendMessage(OptionConfig.TIME_SIGNAL_CHANNELID, "┗(≧Д≦)┛<19時19分!19時19分!\n" + "  《    》");
         }
+        if ((hour == 19) && minute == 23) {
+            DiscordUtil.sendMessage(OptionConfig.TIME_SIGNAL_CHANNELID, "<@453441552275210252>警告あなたのコンピュータはこれ以上電源がついているとウイルスに感染します。直ちに寝なさい");
+        }
 
         if ((hour == 19 || hour == 7) && minute == 30) {
             DiscordUtil.sendMessage(OptionConfig.TIME_SIGNAL_CHANNELID, "定期連絡");

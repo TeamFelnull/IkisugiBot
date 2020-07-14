@@ -28,4 +28,5 @@ dependencies {
  implementation 'org.apache.cassandra:cassandra-all:0.8.1'  
  implementation 'com.google.code.gson:gson:2.8.6'
  implementation 'org.twitter4j:twitter4j-core:4.0.7'
+ implementation 'org.apache.opennlp:opennlp-tools:1.9.2'
 }

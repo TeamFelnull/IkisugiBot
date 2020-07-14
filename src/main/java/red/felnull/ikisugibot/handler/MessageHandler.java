@@ -22,6 +22,7 @@ public class MessageHandler {
         long chanelID = channel.getId().asLong();
         String[] messages = message.getContent().split(" ");
 
+        message.getAuthor().get().getMention();
 
         if (channel.getId().asLong() == OptionConfig.AI_CHANNELID) {
             try {

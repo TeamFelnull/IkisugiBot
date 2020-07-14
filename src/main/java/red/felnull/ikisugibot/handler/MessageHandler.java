@@ -5,12 +5,9 @@ import discord4j.core.object.entity.Message;
 import discord4j.core.object.entity.channel.MessageChannel;
 import red.felnull.ikisugibot.OptionConfig;
 import red.felnull.ikisugibot.command.IKSGCommands;
-<<<<<<< Updated upstream
 import red.felnull.ikisugibot.messages.Ai;
 import red.felnull.ikisugibot.util.DiscordUtil;
-=======
-import sun.security.mscapi.CPublicKey;
->>>>>>> Stashed changes
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,7 +18,7 @@ public class MessageHandler {
     public static void onMessageCreate(MessageCreateEvent e) {
         Message message = e.getMessage();
         MessageChannel channel = message.getChannel().block();
-        public
+
         long chanelID = channel.getId().asLong();
         String[] messages = message.getContent().split(" ");
 

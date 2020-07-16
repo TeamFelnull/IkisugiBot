@@ -25,12 +25,15 @@ public class Main {
         CLIENT = DiscordClient.create(OptionConfig.TOKEN);
         GATEWAY = CLIENT.login().block();
         GATEWAY.on(MessageCreateEvent.class).subscribe(e -> {
+            try {
+                if (e.getMessage().getAuthor().get().isBot())
+                    return;
 
-            if (e.getMessage().getAuthor().get().isBot())
-                return;
 
+                MessageHandler.onMessageCreate(e);
+            } catch (Exception ex) {
 
-            MessageHandler.onMessageCreate(e);
+            }
         });
 
         GATEWAY.onDisconnect().block();
@@ -65,6 +68,7 @@ public class Main {
         public void run() {
             while (true) {
                 Calendar cak = Calendar.getInstance();
+
                 if (lastminis != cak.get(Calendar.MINUTE)) {
                     try {
                         sleep(1000);

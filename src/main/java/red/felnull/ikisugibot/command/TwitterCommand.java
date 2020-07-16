@@ -23,11 +23,11 @@ public class TwitterCommand extends Command {
         try {
             QueryResult result = twitter.search(query);
             String text = "検索結果";
-            text += "ヒット数 : " + result.getTweets().size();
+            text += "ヒット数 : " + result.getTweets().size() + "\n";
             for (Status tweet : result.getTweets()) {
                 text += tweet.getText();
-                text += tweet.getUser();
-                text += tweet.getCreatedAt();
+                //    text += tweet.getUser();
+                //     text += tweet.getCreatedAt();
             }
             DiscordUtil.sendMessage(chanelID, text);
         } catch (Exception ex) {

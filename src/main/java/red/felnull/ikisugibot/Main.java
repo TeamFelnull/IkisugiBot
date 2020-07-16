@@ -1,5 +1,6 @@
 package red.felnull.ikisugibot;
 
+import discord4j.common.util.Snowflake;
 import discord4j.core.DiscordClient;
 import discord4j.core.GatewayDiscordClient;
 import discord4j.core.event.domain.message.MessageCreateEvent;
@@ -66,7 +67,7 @@ public class Main {
                 Calendar cak = Calendar.getInstance();
                 if (lastminis != cak.get(Calendar.MINUTE)) {
                     try {
-                        Thread.sleep(1000);
+                        sleep(1000);
                         try {
                             sleep(1);
                             TimeHandler.onTime(cak.get(Calendar.YEAR), cak.get(Calendar.MONTH), cak.get(Calendar.DATE), cak.get(Calendar.HOUR), cak.get(Calendar.MINUTE));

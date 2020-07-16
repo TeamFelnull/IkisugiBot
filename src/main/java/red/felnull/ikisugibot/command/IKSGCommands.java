@@ -15,7 +15,7 @@ public class IKSGCommands {
         reg("spam", new SpamCommand());
         reg("goroku", new GorokuCommand());
         reg("scan", new ScanCommand());
-        //reg("twitter", new TwitterCommand());
+        reg("twitter", new TwitterCommand());
     }
 
     public static void send(long chanelID, String comand, String... insus) {
